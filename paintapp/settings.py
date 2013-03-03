@@ -5,7 +5,7 @@ import os.path
 
 PROJECT_PATH = os.path.dirname(__file__)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -17,7 +17,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(PROJECT_PATH,'urldata.db'),#'/home/sreehari/django-lab/urlshort/urldata.db',                      # Or path to database file if using sqlite3.
+        'NAME': os.path.join(PROJECT_PATH,'urldata.db'),#
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -105,16 +105,16 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'urlshort.urls'
+ROOT_URLCONF = 'paintapp.urls'
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'url/url-templates'), #'/home/sreehari/url-templates'
+    os.path.join(os.path.dirname(__file__), 'url/url-templates'), #'
 
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
-WSGI_APPLICATION = 'urlshort.wsgi.application'
+WSGI_APPLICATION = 'paintapp.wsgi.application'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
